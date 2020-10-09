@@ -1,15 +1,23 @@
+name: Valgrind
 
-name: cppcheck-action
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
-    name: cppcheck
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-        
-      - name: Install cppcheck
-        run: sudo apt-get -y install cppcheck
-      - name: Cppcheck code
-        run: cppcheck MiniProject_C/3_Implementation 
+    - uses: actions/checkout@v2
+    - name: apt install dependency
+      run: |
+        sudo apt-get -y install valgrind
+        sudo apt-get -y install libcunit1 libcunit1-doc libcunit1-dev 
+    - name: make test
+      run: |
+        make test -C 
+        valgrind Activity-4/.github/workflows/
