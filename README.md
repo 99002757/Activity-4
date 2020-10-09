@@ -4,3 +4,4 @@
 ![cppcheck-action](https://github.com/99002757/Activity-4/workflows/cppcheck-action/badge.svg)
 ![build](https://github.com/99002757/Activity-4/workflows/build/badge.svg)
 ![unittest](https://github.com/99002757/Activity-4/workflows/unittest/badge.svg)
+![Valgrind](https://github.com/99002757/Activity-4/workflows/Valgrind/badge.svg)
